@@ -23,6 +23,38 @@
 
         console.log(myName);
 
+        var myNameLength;
+
+        myNameLength = myName.length;
+
+        console.log(myNameLength) // logs length of the string myName
+
+        var LastLetter = myName[0];
+
+        console.log(LastLetter); // logs first letter of the string
+
+        var myArray = ['First', 'Second', 3];
+        
+        myArray[0] = 'String'
+
+        console.log(myArray[0]);
+
+        myArray.push(["Another", "Word"]); // adds specifyed value to myArray end
+
+        console.log(myArray[3][1]);
+
+        var anotherArray = myArray.pop(); // removes last value from array and stores it in the specifyed variable
+
+        console.log(anotherArray);
+
+        var another = anotherArray.shift(); //removes first value from array and stores it in the specifyed variable
+
+        console.log(another);
+
+        anotherArray.unshift('Replaced'); // adds specifyed value to myArray begining
+
+        console.log(anotherArray);
+
     </script>
 </body>
 </html>
