@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var myList = [["cereal", 3], ["milk", 2], ["bananas", 3], ["juice", 2], ["eggs", 12]] // shoping list example array
+
+        // codind and calling a funtion
+        function myReusableFunction() {
+            console.log("Hello World")
+        }
+
+        myReusableFunction ();
+
+        // function with arguments
+        function addTwoNumbers( x, y) {
+            console.log(x+y);
+        }
+
+        addTwoNumbers(1, 6);
+
+        // variable scope
+        function myLocalScope() {
+            var myVar = 5;
+            console.log(myVar);
+        }
+
+        myLocalScope();
+
+        var outerWear = "T-shirt";
+
+        function myOutfit() {
+            var outerWear = "Sweater";
+            return outerWear; // returns a value from a function
+        }
+
+        console.log(myOutfit());
+        console.log(outerWear);
+
+    </script>
+</body>
+</html>
