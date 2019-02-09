@@ -41,6 +41,51 @@
         console.log(myOutfit());
         console.log(outerWear);
 
+        var sum = 0;
+
+        // functions do not need to return value, if logged following function returns "undefined"
+
+        function change() {
+            sum += 6;
+        }
+
+        console.log(change());
+
+        // order of items
+
+        function nextInLine(arr, item) {
+            arr.push(item);
+            return arr.shift();
+        }
+
+        var testArr = [1,2,3,4,5];
+
+        console.log("Before: " + JSON.stringify(testArr));
+        console.log(nextInLine(testArr, 6));
+        console.log("After: " + JSON.stringify(testArr));
+
+        // if statement
+
+        function trueOrFalse(isItTrue) {
+            if (isItTrue) {
+                return "Yes, it is true";
+            }
+            return "No, it's false"
+        }
+
+        console.log(trueOrFalse(true));
+
+        // equality operator
+
+        function testEqual(val) {
+            if (val == 12 ) {
+                return "Equal";
+            }
+            return "Not Equal";
+        }
+
+        console.log(testEqual(11));
+
     </script>
 </body>
 </html>
