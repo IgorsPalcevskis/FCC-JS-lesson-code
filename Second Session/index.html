@@ -86,9 +86,63 @@
 
         console.log(testEqual(11));
 
-        // === strict equality does dot bot attempt to convert values
+        // === strict equality operator, does dot not attempt to convert values
 
         // != is not equal comparison operator
+
+        // !== strict not equality operator, does dot not attempt to convert values
+
+        // Greater or lower comparison operators
+
+        function testGreaterLower (val) {
+            if (val > 100) {
+                return "Greater then 100";
+            }
+            if (val < 100) {
+                return "Lower then 100";
+            }
+            return "Equal 100";
+        }
+
+        console.log(testGreaterLower(50));
+
+        function testLogicalEnd(val) {
+            if (val <= 50 && val >= 25) { // && is an and oprator
+                return "Yes";
+            }
+            return "No";
+        }
+
+        function testLogicalOr(val) {
+            if (val < 10 || val > 20) {
+                return "Outside";
+            }
+            return "Inside";
+        }
+
+        function testElse(val) {
+            var result = "";
+            if (val > 5){
+                result = "Bigger than 5";
+            } else {
+                result = "5 or smaller"
+            }
+            return result;
+        }
+
+        console.log(testElse(6));
+
+        function orderMyLogic(val) {
+            if (val < 5) {
+                return "Less than 5";
+            } else if (val < 10) {
+                return "Less than 10";
+            } else {
+                return "Greater than or equal to 10";
+            }
+        }
+
+        console.log(orderMyLogic(3));
 
     </script>
 </body>
