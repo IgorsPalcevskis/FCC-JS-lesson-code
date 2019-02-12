@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+// while loop
+var myArray = [];
+var i = 0;
+while (i<=5) {
+  myArray.push(i);
+  i++;
+}
+console.log(myArray);
+
+// for loop
+var ourArray = [];
+for (var i=0; i <= 5; i++) {
+  ourArray.push(i);
+}
+console.log(ourArray);
+
+var testArray = [2,3,4,5,6];
+var testTotal = 0;
+for (let i = 0; i < testArray.length; i++) {
+  testTotal += testArray[i];    
+}
+console.log(testTotal);
+
+// nesting for loops
+function multiplyAll(arr) {
+  var product = 1;
+  for (var i = 0; i < arr.length; i++) {
+    for ( var j =0; j < arr[i].length; j++) {
+      product *= arr[i][j];
+    }
+  }
+  return product;
+}
+var product = multiplyAll([[1,2],[3,4],[5,6,7]]);
+console.log(product);
+</script>
+</body>
+</html>
