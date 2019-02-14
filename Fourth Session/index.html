@@ -42,6 +42,90 @@ function multiplyAll(arr) {
 }
 var product = multiplyAll([[1,2],[3,4],[5,6,7]]);
 console.log(product);
+
+// iterate with Do...while loops
+var anotherArray = [];
+var x = 10;
+do {  // always runs first iteration before checking for the condition
+  anotherArray.push(x);
+  x++;
+} while (x<5)
+console.log(x, anotherArray);
+
+// FCC profile lookup coding challange
+var contacts = [
+  {
+    "firstName": "Akira",
+    "lastName": "Laine",
+    "number": "0543236543",
+    "likes": ["Pizza", "Coding", "Brownie Points"]
+  },
+  {
+    "firstName": "Harry",
+    "lastName": "Potter",
+    "number": "0994372684",
+    "likes": ["Hogwarts", "Magic", "Hagrid"]
+  },
+  {
+    "firstName": "Sherlock",
+    "lastName": "Holmes",
+    "number": "0487345643",
+    "likes": ["Intriguing Cases", "Violin"]
+  },
+  {
+    "firstName": "Kristian",
+    "lastName": "Vos",
+    "number": "unknown",
+    "likes": ["JavaScript", "Gaming", "Foxes"]
+  }
+];
+
+function lookUpProfile(name, prop){
+  for (var i = 0; i < contacts.length; i++) {
+    if (contacts[i]["firstName"] === name) {
+      return contacts[i][prop] || "No such property";  // returns propery value or if it does not exist returns string
+    }
+  }
+  return "This contact does not exist";
+}
+
+console.log(lookUpProfile("Sherlock", "likes"));
+
+function randomFraction() {
+  return Math.random();  // returns random number from 0 to 1
+}
+console.log(randomFraction());
+
+console.log(Math.floor(Math.random()*20)); // returns random number from 0 to 19
+
+function myRandomRange(myMin, myMax) {
+  return Math.floor(Math.random() * (myMax-myMin+1)) + myMin; // returns random numbers in a custom range
+}
+console.log(myRandomRange(3, 16));
+
+// parseInt function
+function convertToInteger(str) {
+  return parseInt(str); // converts string to integer
+}
+console.log(convertToInteger("56")); // returns number 56 and not a string "56"
+
+function convertToIntegerSecond(str) {
+  return parseInt(str, 2); // second argument on parseInt() is the radix and can be any number between 2 and 36
+}
+console.log(convertToIntegerSecond("10011")); // converts binary string to an integer
+
+// Conditional (Ternary) Operator
+function checkEqual(a, b) {
+  return a === b ? true : false;
+}
+console.log(checkEqual(5, 6));
+
+function checkSign(num) {
+  return num > 0 ? "positive" : num < 0 ? "negative" : "zero";
+}
+
+console.log(checkSign(-2));
+
 </script>
 </body>
 </html>
